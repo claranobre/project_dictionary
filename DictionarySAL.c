@@ -1,7 +1,8 @@
-class DictionarySAL : public DictionaryAL{ //Indicação de Herança
+template <typename Key, typename Data, typename KeyComparator>
+class DictionarySAL : public DictionaryAL <Key,Data,KeyComparator>{ //Indicação de Herança
 
 	public:
-		DictionarySAL(int _MaxSz) :: DictionaryAL (int _MaxSz) {};
+		DictionarySAL(int _MaxSz) :: DictionaryAL<Key,Data,KeyComparator>(_MaxSz) {};
 		virtual ~DictionarySAL(){};
 
 		//Métodos para sobreescrever
