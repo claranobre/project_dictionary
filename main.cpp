@@ -1,3 +1,8 @@
+include "DictionaryAL.hpp"
+include "DictionarySAL.hpp"
+
+using namespace std;
+
 class MyKeyComparator{
 	public:
 		int operator()(int lhs, int rhs) const {
@@ -10,7 +15,7 @@ class MyKeyComparator{
 };
 
 int main(){
-	DictionarySAL <int, std::string, MyKeyComparator> myList (50);
+	DictionarySAL <int, std::string, KeyComparator> myList (50);
 
 	cout << ">>> Inserindo {2015003129, "\Jack\"}" << endl;
 	myList.insert(2015003129, "Jack");
